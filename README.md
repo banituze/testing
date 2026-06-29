@@ -4,27 +4,26 @@ Ever had a report go live after testing, only to have end users report issues th
 
 A common challenge persists across many organizations and that is **the lack of structured testing protocols** before deploying Power BI solutions to production environments. Too often, we rely on superficial checks and subjective approvals ("**X said it looks good**") rather than systematic verification. This article explores three key benefits of automated testing in Power BI: maintaining data quality, improving documentation standards, and building client confidence through professional development practices.
 
-##### Table of Contents  
-[Why Automated Testing Matters for PBI](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#why-automated-testing-matters-for-power-bi) <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Beyond Manual Verification](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#beyond-manual-verification) <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Build Client Confidence](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#building-client-confidence) <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Definition of Done in Power BI projects](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#definition-of-done-in-power-bi-projects) <br>
-[Introducing DAX QUERY VIEW](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#introducing-dax-query-view) <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Automated Testing Methodology in PBI via DAX QUERY VIEW](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#automated-testing-methodology-in-power-bi-via-dax-query-view) <br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Types of Tests Possible in DAX QUERY VIEW](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#types-of-tests-possible-in-dax-query-view) <br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1. Data Quality Tests](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#1-data-quality-tests) <br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2. Referential Integrity Tests](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#2-referential-integrity-tests) <br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3. Calculation Consistency Tests](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#3-calculation-consistency-tests) <br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4. Business Rule Tests](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#4-business-rule-tests) <br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[5. Completness Tests](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#5-completeness-tests) <br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[6. Intermediate Calculation Tests](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#6-intermediate-calculation-tests) <br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[7. Historical Comparison Tests](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#7-historical-comparison-tests) <br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[8. Aggregation Tests](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#8-aggregation-tests) <br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[9. Schema Tests](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#9-schema-tests) <br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[10. Consolidation Testing Approach](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#consolidated-testing-approach) <br>
-[Summary](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#summary) <br>
-[Conclusion](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#conclusion) <br>
-[Read More](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/06%20-%20Automated%20Testing%20in%20Power%20BI.md#read-more)
+##### Table of Contents
+[Why Automated Testing Matters for PBI](https://github.com/banituze/testing#why-automated-testing-matters-for-power-bi) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Beyond Manual Verification](https://github.com/banituze/testing#beyond-manual-verification) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Build Client Confidence](https://github.com/banituze/testing#building-client-confidence) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Definition of Done in Power BI projects](https://github.com/banituze/testing#definition-of-done-in-power-bi-projects) <br>
+[Introducing DAX QUERY VIEW](https://github.com/banituze/testing#introducing-dax-query-view) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Automated Testing Methodology in PBI via DAX QUERY VIEW](https://github.com/banituze/testing#automated-testing-methodology-in-power-bi-via-dax-query-view) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Types of Tests Possible in DAX QUERY VIEW](https://github.com/banituze/testing#types-of-tests-possible-in-dax-query-view) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1. Data Quality Tests](https://github.com/banituze/testing#1-data-quality-tests) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2. Referential Integrity Tests](https://github.com/banituze/testing#2-referential-integrity-tests) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3. Calculation Consistency Tests](https://github.com/banituze/testing#3-calculation-consistency-tests) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4. Business Rule Tests](https://github.com/banituze/testing#4-business-rule-tests) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[5. Completness Tests](https://github.com/banituze/testing#5-completeness-tests) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[6. Intermediate Calculation Tests](https://github.com/banituze/testing#6-intermediate-calculation-tests) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[7. Historical Comparison Tests](https://github.com/banituze/testing#7-historical-comparison-tests) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[8. Aggregation Tests](https://github.com/banituze/testing#8-aggregation-tests) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[9. Schema Tests](https://github.com/banituze/testing#9-schema-tests) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[10. Consolidation Testing Approach](https://github.com/banituze/testing#consolidated-testing-approach) <br>
+[Summary](https://github.com/banituze/testing#summary) <br>
+[Conclusion](https://github.com/banituze/testing#conclusion) <br>
 
 ### Why Automated Testing Matters for Power BI
 
@@ -125,8 +124,6 @@ Document with the PO (Product Owner) or business expert matter the automated tes
 - Allowed variance percentage
 - DAX code to test
 
-For each new KPI created, document the definition and business rules as explained in last week Greg's article [05 - What content is in a Design Document - Workflow Issues Business Rules](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/05%20-%20What%20content%20is%20in%20a%20Design%20Document%20-%20Workflow%20Issues%20Business%20Rules.md#business-rules)  and request an example (e.g., number of employees in France in December 2024). This Excel file will serve as a reference and be part of the "Definition of Done" criteria.
-
 ##### 2. Import the Excel File into Power BI
 
 Integrate this file as a disconnected table in your model.
@@ -140,7 +137,7 @@ Use the following structure for your tests:
 
 <img width="478" alt="Pasted image 20250302174647" src="https://github.com/user-attachments/assets/229500ec-d477-4107-a89f-66b96ffd61b4" /> <br>
 
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - DAX Test Pattern](https://github.com/banituze/testing/tree/main/tests/DAX%20Test%20Pattern) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - DAX Test Pattern](https://github.com/banituze/testing/blob/main/tests/DAX%20Test%20Pattern) 
 
 > [!IMPORTANT]  
 >**Tests are performed each time you click RUN**. The best part is that they're saved with your model and can be seen in DevOps/GitHub.
@@ -169,7 +166,7 @@ ROW(
     "Test Passed", DISTINCTCOUNT('Customer'[Country]) = 45
 )
 ```
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Data Quality Test 1](https://github.com/banituze/testing/tree/main/tests/Data%20Quality%20Test%201) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Data Quality Test 1](https://github.com/banituze/testing/blob/main/tests/Data%20Quality%20Test%201) 
 
 Another example:
 
@@ -177,7 +174,7 @@ Another example:
 
 
 
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Data Quality Test 2](https://github.com/banituze/testing/tree/main/tests/Data%20Quality%20Test%202) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Data Quality Test 2](https://github.com/banituze/testing/blob/main/tests/Data%20Quality%20Test%202) 
 
 
 #### 2. Referential Integrity Tests
@@ -191,9 +188,9 @@ Verify that all foreign keys correspond to existing primary keys:
 ```
 FILTER(
 INFO.STORAGETABLES(),
-[RIVIOLATION_COUNT]>0
+[RIVIOLATION_COUNT]>0)
 ```
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Referential Integrity 1](https://github.com/banituze/testing/tree/main/tests/Referential%20Integrity%201) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Referential Integrity 1](https://github.com/banituze/testing/blob/main/tests/Referential%20Integrity%201) 
 
 ![Pasted image 20250302163340](https://github.com/user-attachments/assets/21a01e15-9e0c-4701-80c4-bed1c7739aaf)
 
@@ -204,7 +201,7 @@ A more detailed query identifying what Dimensions are in RI violation and the ex
 ![Pasted image 20250302163105](https://github.com/user-attachments/assets/025c8392-b63e-48bf-af4c-ec8d78fb5239)
 
 
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Referential Integrity 2](https://github.com/banituze/testing/tree/main/tests/Referential%20Integrity%202) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Referential Integrity 2](https://github.com/banituze/testing/blob/main/tests/Referential%20Integrity%202) 
 
 Another example for checking orphaned records:
 
@@ -218,7 +215,7 @@ ROW(
     "Test Passed", COUNTROWS(FILTER(F_CLIENT_OVERDRAFT, NOT(F_CLIENT_OVERDRAFT[CODE_MIG] IN VALUES(D_STRUCTURES[CODE_MIG])))) = 0
 )
 ```
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Referential Integrity 3](https://github.com/banituze/testing/tree/main/tests/Referential%20Integrity%203) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Referential Integrity 3](https://github.com/banituze/testing/blob/main/tests/Referential%20Integrity%203) 
 
 ![Pasted image 20250302164128](https://github.com/user-attachments/assets/e1df296a-0a27-4409-84bf-e3ac23a64a34)
 
@@ -239,7 +236,7 @@ ROW(
     "Test Passed", ABS(1-DIVIDE([Total Sales], [Q1 Sales] + [Q2 Sales] + [Q3 Sales] + [Q4 Sales])) <= 0.001
 )
 ```
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Calculation Consistency](https://github.com/banituze/testing/tree/main/tests/Consistency%20Tests) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Calculation Consistency](https://github.com/banituze/testing/blob/main/tests/Consistency%20Tests) 
 
 #### 4. Business Rule Tests
 
@@ -257,7 +254,7 @@ ROW(
     "Test Passed", COUNTROWS(FILTER(Sales, [Gross Margin] < 0)) = 0
 )
 ```
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Business Rules](https://github.com/banituze/testing/tree/main/tests/Business%20Rules%20Tests) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Business Rules](https://github.com/banituze/testing/blob/main/tests/Business%20Rules%20Tests) 
 
 #### 5. Completeness Tests
 
@@ -279,7 +276,7 @@ ROW(
                                  "Category6", "Category7", "Category8", "Category9", "Category10"})) = 10
 )
 ```
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Completness test](https://github.com/banituze/testing/tree/main/tests/Completness%20Tests) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Completness test](https://github.com/banituze/testing/blob/main/tests/Completness%20Tests) 
 
 #### 6. Intermediate Calculation Tests
 
@@ -303,7 +300,7 @@ ADDCOLUMNS(
     "Test Passed", ABS([Net Revenue] - ([Base Revenue] - [Total Discounts] + [Total Taxes])) < 0.01
 )
 ```
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Intermediate Calculation](https://github.com/banituze/testing/tree/main/tests/Intermediate%20Calculation) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Intermediate Calculation](https://github.com/banituze/testing/blob/main/tests/Intermediate%20Calculation) 
 
 #### 7. Historical Comparison Tests
 
@@ -320,7 +317,7 @@ ROW(
     "Test Passed", [Average Order Value] >= 250 && [Average Order Value] <= 350
 )
 ```
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Historical Comparison](https://github.com/banituze/testing/tree/main/tests/Historical%20Comparison) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Historical Comparison](https://github.com/banituze/testing/blob/main/tests/Historical%20Comparison) 
 
 #### 8. Aggregation Tests
 
@@ -338,13 +335,13 @@ ROW(
     "Test Passed", ABS([Total Revenue] - SUMX(VALUES(Region[RegionName]), CALCULATE([Total Revenue]))) < 0.01
 )
 ```
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Aggregation Test](https://github.com/banituze/testing/tree/main/tests/Aggregation%20Tests) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Aggregation Test](https://github.com/banituze/testing/blob/main/tests/Aggregation%20Tests) 
 
 #### 9. Schema Tests
 
 Validating schema consistency is crucial because any unexpected changes in your central model can break dependent reports, leading to errors and inaccurate analyses. Ensuring the schema remains consistent safeguards the integrity of all connected reports and minimizes disruptions and costly troubleshooting.
 
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Schema Test](https://github.com/banituze/testing/tree/main/tests/Schema%20Tests) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Schema Test](https://github.com/banituze/testing/blob/main/tests/Schema%20Tests) 
 
 ![Pasted image 20250302164756](https://github.com/user-attachments/assets/530d67f0-4f11-4945-b7a1-d8b0b5a9bd33)
 
@@ -365,7 +362,7 @@ DAX Query structure :
 <img width="203" alt="Pasted image 20250302171047" src="https://github.com/user-attachments/assets/ab5e07e0-addf-4689-a5b8-57e174841aac" />
 
 
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - DAX Code Script](https://github.com/banituze/testing/tree/main/tests/Excel%20Consolidated%20DAX) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - DAX Code Script](https://github.com/banituze/testing/blob/main/tests/Excel%20Consolidated%20DAX) 
 
 Result of "DAX Code"  in Visual Studio Code -> Copy for each ID test the corresponding DAX formula
 <img width="763" alt="Pasted image 20250302171019" src="https://github.com/user-attachments/assets/7fe83ac3-b03c-40a1-bb57-7e361aacb053" />
@@ -385,9 +382,3 @@ While this article focuses on testing within Power BI using DAX Query View, it's
 Effective organizations implement quality gates at multiple stages: during ingestion, ETL (Extract Transform Load), data pipeline development, within the data warehouse / lakehouse, and finally in Power BI reports. For advanced implementations, consider exploring CI/CD Azure pipelines with PR-triggered (Pull Request) automated tests. For guidance on implementing these advanced techniques, see our read more section. Each layer should have appropriate testing mechanisms that verify data integrity, transformation accuracy, and business rule compliance.
 
 By integrating testing across the entire data flow and making it a core part of your Definition of Done at each stage, you create a robust foundation for reliable, trustworthy business intelligence that stakeholders can confidently use for decision-making.
-
-### Read more
-
-- Great detailed presentation on IOWA PBI User Group with James Bartlett and Narayana Windenberger : https://www.youtube.com/live/PL7Xw2dvVrE?si=FJ7j7ZLtLiiWrKTl
-
-- John Kerski blog: [DAX Query View Testing Pattern | John Kerski’s Blog](https://www.kerski.tech/bringing-dataops-to-power-bi-part36/)
