@@ -1,9 +1,5 @@
 ### Data Quality and Automated Testing in Power BI
 
-<img width="1920" alt="Issue 6" src="https://github.com/user-attachments/assets/953efa1b-1be3-47f0-adb9-7bb60d430a2b" />
-
-
-
 Ever had a report go live after testing, only to have end users report issues that could have been identified earlier?
 
 A common challenge persists across many organizations and that is **the lack of structured testing protocols** before deploying Power BI solutions to production environments. Too often, we rely on superficial checks and subjective approvals ("**X said it looks good**") rather than systematic verification. This article explores three key benefits of automated testing in Power BI: maintaining data quality, improving documentation standards, and building client confidence through professional development practices.
