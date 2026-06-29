@@ -140,7 +140,7 @@ Use the following structure for your tests:
 
 <img width="478" alt="Pasted image 20250302174647" src="https://github.com/user-attachments/assets/229500ec-d477-4107-a89f-66b96ffd61b4" /> <br>
 
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - DAX Test Pattern](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/DAX%20Query%20View/DAX%20Test%20Pattern) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - DAX Test Pattern](https://github.com/banituze/testing/tree/main/tests/DAX%20Test%20Pattern) 
 
 > [!IMPORTANT]  
 >**Tests are performed each time you click RUN**. The best part is that they're saved with your model and can be seen in DevOps/GitHub.
@@ -169,7 +169,7 @@ ROW(
     "Test Passed", DISTINCTCOUNT('Customer'[Country]) = 45
 )
 ```
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Data Quality Test 1](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/DAX%20Query%20View/Data%20Quality%20Test%201) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Data Quality Test 1](https://github.com/banituze/testing/tree/main/tests/Data%20Quality%20Test%201) 
 
 Another example:
 
@@ -177,7 +177,7 @@ Another example:
 
 
 
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Data Quality Test 2](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/DAX%20Query%20View/Data%20Quality%20Test%202) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Data Quality Test 2](https://github.com/banituze/testing/tree/main/tests/Data%20Quality%20Test%202) 
 
 
 #### 2. Referential Integrity Tests
@@ -193,7 +193,7 @@ FILTER(
 INFO.STORAGETABLES(),
 [RIVIOLATION_COUNT]>0
 ```
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Referential Integrity 1](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/DAX%20Query%20View/Referential%20Integrity%201) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Referential Integrity 1](https://github.com/banituze/testing/tree/main/tests/Referential%20Integrity%201) 
 
 ![Pasted image 20250302163340](https://github.com/user-attachments/assets/21a01e15-9e0c-4701-80c4-bed1c7739aaf)
 
@@ -204,7 +204,7 @@ A more detailed query identifying what Dimensions are in RI violation and the ex
 ![Pasted image 20250302163105](https://github.com/user-attachments/assets/025c8392-b63e-48bf-af4c-ec8d78fb5239)
 
 
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Referential Integrity 2](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/DAX%20Query%20View/Referential%20Integrity%202) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Referential Integrity 2](https://github.com/banituze/testing/tree/main/tests/Referential%20Integrity%202) 
 
 Another example for checking orphaned records:
 
@@ -218,7 +218,7 @@ ROW(
     "Test Passed", COUNTROWS(FILTER(F_CLIENT_OVERDRAFT, NOT(F_CLIENT_OVERDRAFT[CODE_MIG] IN VALUES(D_STRUCTURES[CODE_MIG])))) = 0
 )
 ```
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Referential Integrity 3](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/DAX%20Query%20View/Referential%20Integrity%203) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Referential Integrity 3](https://github.com/banituze/testing/tree/main/tests/Referential%20Integrity%203) 
 
 ![Pasted image 20250302164128](https://github.com/user-attachments/assets/e1df296a-0a27-4409-84bf-e3ac23a64a34)
 
@@ -239,7 +239,7 @@ ROW(
     "Test Passed", ABS(1-DIVIDE([Total Sales], [Q1 Sales] + [Q2 Sales] + [Q3 Sales] + [Q4 Sales])) <= 0.001
 )
 ```
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Calculation Consistency](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/DAX%20Query%20View/Consistency%20Tests) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Calculation Consistency](https://github.com/banituze/testing/tree/main/tests/Consistency%20Tests) 
 
 #### 4. Business Rule Tests
 
@@ -257,7 +257,7 @@ ROW(
     "Test Passed", COUNTROWS(FILTER(Sales, [Gross Margin] < 0)) = 0
 )
 ```
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Business Rules](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/DAX%20Query%20View/Business%20Rules%20Tests) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Business Rules](https://github.com/banituze/testing/tree/main/tests/Business%20Rules%20Tests) 
 
 #### 5. Completeness Tests
 
@@ -279,7 +279,7 @@ ROW(
                                  "Category6", "Category7", "Category8", "Category9", "Category10"})) = 10
 )
 ```
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Completness test](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/DAX%20Query%20View/Completness%20Tests) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Completness test](https://github.com/banituze/testing/tree/main/tests/Completness%20Tests) 
 
 #### 6. Intermediate Calculation Tests
 
@@ -303,7 +303,7 @@ ADDCOLUMNS(
     "Test Passed", ABS([Net Revenue] - ([Base Revenue] - [Total Discounts] + [Total Taxes])) < 0.01
 )
 ```
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Intermediate Calculation](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/DAX%20Query%20View/Intermediate%20Calculation) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Intermediate Calculation](https://github.com/banituze/testing/tree/main/tests/Intermediate%20Calculation) 
 
 #### 7. Historical Comparison Tests
 
@@ -320,7 +320,7 @@ ROW(
     "Test Passed", [Average Order Value] >= 250 && [Average Order Value] <= 350
 )
 ```
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Historical Comparison](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/DAX%20Query%20View/Historical%20Comparison) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Historical Comparison](https://github.com/banituze/testing/tree/main/tests/Historical%20Comparison) 
 
 #### 8. Aggregation Tests
 
@@ -338,13 +338,13 @@ ROW(
     "Test Passed", ABS([Total Revenue] - SUMX(VALUES(Region[RegionName]), CALCULATE([Total Revenue]))) < 0.01
 )
 ```
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Aggregation Test](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/DAX%20Query%20View/Aggregation%20Tests) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Aggregation Test](https://github.com/banituze/testing/tree/main/tests/Aggregation%20Tests) 
 
 #### 9. Schema Tests
 
 Validating schema consistency is crucial because any unexpected changes in your central model can break dependent reports, leading to errors and inaccurate analyses. Ensuring the schema remains consistent safeguards the integrity of all connected reports and minimizes disruptions and costly troubleshooting.
 
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - Schema Test](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/DAX%20Query%20View/Schema%20Tests) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - Schema Test](https://github.com/banituze/testing/tree/main/tests/Schema%20Tests) 
 
 ![Pasted image 20250302164756](https://github.com/user-attachments/assets/530d67f0-4f11-4945-b7a1-d8b0b5a9bd33)
 
@@ -365,7 +365,7 @@ DAX Query structure :
 <img width="203" alt="Pasted image 20250302171047" src="https://github.com/user-attachments/assets/ab5e07e0-addf-4689-a5b8-57e174841aac" />
 
 
-##### You can access the DAX CODE HERE -> [DAX Query View | Script - DAX Code Script](https://github.com/alexbadiu-insightsinmotion/PBI-Documentation/blob/main/DAX%20Query%20View/Excel%20Consolidated%20DAX) 
+##### You can access the DAX CODE HERE -> [DAX Query View | Script - DAX Code Script](https://github.com/banituze/testing/tree/main/tests/Excel%20Consolidated%20DAX) 
 
 Result of "DAX Code"  in Visual Studio Code -> Copy for each ID test the corresponding DAX formula
 <img width="763" alt="Pasted image 20250302171019" src="https://github.com/user-attachments/assets/7fe83ac3-b03c-40a1-bb57-7e361aacb053" />
