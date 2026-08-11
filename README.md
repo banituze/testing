@@ -99,7 +99,7 @@ Automated testing in Power BI directly supports DoD by:
 > [!TIP]
 > Automated testing methodology will help  **develop a library of reusable tests**. This approach makes it **easier to scale testing** as your "regression" tests are already developed and also **serve as template for other Power BI projects.**
 
-# Introducing DAX QUERY VIEW
+## Introducing DAX QUERY VIEW
 
 As Power BI reports and data models become **more complex and business-critical**, implementing automated testing becomes increasingly important. **Testing helps ensure that calculations are accurate, data is complete, and the business logic is correctly implemented.** However, Power BI lacks built-in testing capabilities found in more traditional software development environments.
 
