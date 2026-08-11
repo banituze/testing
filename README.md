@@ -25,21 +25,21 @@ A common challenge persists across many organizations and that is **the lack of 
 [Summary](https://github.com/banituze/testing#summary) <br>
 [Conclusion](https://github.com/banituze/testing#conclusion) <br>
 
-### Why Automated Testing Matters for Power BI
+## Why Automated Testing Matters for Power BI
 
-#### Beyond Manual Verification
+### Beyond Manual Verification
 
 Traditional testing approaches for Power BI reports often consist of visual inspections and basic data sampling **very often limited only to new features** to be delivered. While these methods can catch obvious errors, **they're limited by human fallibility and preconceptions**, inconsistent application, and inability to scale. Humans tend to discount earlier things they may have otherwise noticed, especially during re-testing (I don't need to look at this as I've checked it before...). Automated testing provides a systematic approach that ensures comprehensive **coverage across all new and old (regression testing) features.**
 
-#### Building Client Confidence
+### Building Client Confidence
 
 Demonstrating **a robust testing framework communicates professionalism and attention to detail** that builds confidence. Rather than stating **"we've checked it works,**" teams can **provide evidence through documented test results** that ensure data accuracy.
 
-#### Definition of Done in Power BI projects
+### Definition of Done in Power BI projects
 
 Definition of Done is a shared understanding of **what "complete" means for any deliverable**. It's a checklist of criteria that must be met before work is considered finished.
 
-##### Definition of Done: Power BI Drill-Through Functionality
+### Definition of Done: Power BI Drill-Through Functionality
 
 Implementation of custom drill-through functionality allowing users to navigate from summary visualizations to detailed reports based on selected data points.
 
@@ -78,7 +78,7 @@ Implementation of custom drill-through functionality allowing users to navigate 
 >   - Rollback plan documented
 
 
-##### What it serves
+### What it serves
 
 - Creates **clarity on quality expectations**
 - **Prevents incomplete work** from moving forward
@@ -86,7 +86,7 @@ Implementation of custom drill-through functionality allowing users to navigate 
 - Builds **consistency across team deliverables**
 - Establishes **a common language between technical and business stakeholders**
 
-##### How automated testing relates to DoD (Definition of Done) in Power BI
+### How automated testing relates to DoD (Definition of Done) in Power BI
 
 Automated testing in Power BI directly supports DoD by:
 - Providing **objective verification of calculation accuracy**
@@ -110,9 +110,9 @@ The following methodology outlines how to implement systematic testing in Power 
 By implementing this approach, you can significantly **increase confidence** in your Power BI reports, **reduce errors**, and **quickly identify issues** if/when they occur - all through a single, unified testing interface that requires just one click to execute.
 
 
-### Automated Testing Methodology in Power BI via DAX Query View
+## Automated Testing Methodology in Power BI via DAX Query View
 
-#### How to Create Automated Testing
+### How to Create Automated Testing
 
 ##### 1. Create a Reference Excel File
 
@@ -346,7 +346,7 @@ Validating schema consistency is crucial because any unexpected changes in your 
 ![Pasted image 20250302164756](https://github.com/user-attachments/assets/530d67f0-4f11-4945-b7a1-d8b0b5a9bd33)
 
 
-#### Consolidated Testing Approach
+### Consolidated Testing Approach
 
 All of the tests described above **can be integrated into** the structure shown in section 3, allowing you to have **a single query that runs all tests with one click**. This provides a comprehensive overview of your model's quality and accuracy. Here's how you can consolidate them:
 
@@ -371,11 +371,11 @@ Result of "DAX Code"  in Visual Studio Code -> Copy for each ID test the corresp
 This way, you can run your entire test suite with a single click in DAX Query View, giving you a comprehensive snapshot of your model's quality and reliability. The results will show you at a glance which tests have passed and which need attention **BEFORE considering publishing** to PBI service (DEV environment) or committing to a dev branch.
 
 
-### Summary
+## Summary
 
 Implementing a formal Definition of Done with embedded testing can significantly improve Power BI development. By documenting expected outcomes in an Excel and validating them with DAX Query queries tests, teams can objectively measure when a report meets business requirements. This structured approach **ensures consistency, builds confidence in reports, and significantly reduces errors in production.**
 
-### Conclusion
+## Conclusion
 
 While this article focuses on testing within Power BI using DAX Query View, it's crucial to understand that **data quality testing should be conducted throughout the entire project lifecycle**, from data ingestion to final report distribution. The testing methodology described here addresses the Power BI developer's scope, but represents just one component of a comprehensive data quality strategy.
 
